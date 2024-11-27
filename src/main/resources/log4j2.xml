@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration statusLoggerLevel="INFO" monitorInterval="0">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console" />
+        </Root>
+        <Logger name="org.mongodb.typhon" level="debug"/>
+        <Logger name="org.mongodb" level="WARN"/>
+        <Logger name="org.apache.logging.log4j" level="WARN"/>
+        <Logger name="io.ktor.client" level="DEBUG"/>
+    </Loggers>
+</Configuration>
